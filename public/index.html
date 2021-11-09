@@ -35,11 +35,11 @@
          //   console.log('id_token',response.credential);
          const body = {id_token: response.credential};
 
-         // const url = (window.location.hostname.includes('localhost'))
-         //             ? 'http://localhost:3000/api/auth/google'
-         //             : 'https://restserver-node-appp.herokuapp.com'
+         const url = (window.location.hostname.includes('localhost'))
+                     ? 'http://localhost:3000/api/auth/google'
+                     : 'https://restserver-node-appp.herokuapp.com/'
 
-         fetch('http://localhost:3000/api/auth/google',{
+         fetch(url,{
             method: 'POST',
             headers: {
                'Content-Type': 'application/json'
